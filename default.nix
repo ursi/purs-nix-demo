@@ -4,12 +4,11 @@ let
   inherit (import ./inputs.nix) pkgs purescript-tidy purs-nix;
 
   purescript-tidy-patched =
-    let
-      version = (l.importJSON (purescript-tidy + /package.json)).version;
-    in
     pkgs.stdenv.mkDerivation
+      rec
       { name = "purescript-tidy-patched";
         src = purescript-tidy;
+        version = (l.importJSON (purescript-tidy + /package.json)).version;
 
         patchPhase =
           ''
