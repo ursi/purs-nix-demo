@@ -45,7 +45,7 @@ let
       };
 
 
-  inherit (purs-nix) build ps-pkgs ps-pkgs-ns purs;
+  inherit (purs-nix) ps-pkgs purs;
 
   inherit
     (purs
