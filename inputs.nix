@@ -8,6 +8,13 @@ rec
       )
       {};
 
+  purescript-tidy =
+    fetchGit
+      { url = "https://github.com/natefaubion/purescript-tidy.git";
+        ref = "main";
+        rev = "f4723287f9ea0d355e7bbdb549b85bfd3487a549";
+      };
+
   purs-nix =
     import
       (fetchGit
@@ -16,11 +23,4 @@ rec
          }
       )
       { inherit pkgs; };
-
-  purescript-tidy =
-    fetchGit
-      { url = "https://github.com/natefaubion/purescript-tidy.git";
-        ref = "main";
-        rev = "f4723287f9ea0d355e7bbdb549b85bfd3487a549";
-      };
 }

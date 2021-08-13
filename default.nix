@@ -4,7 +4,7 @@ let
   inherit (import ./inputs.nix) pkgs purescript-tidy purs-nix;
 
   purescript-tidy-patched =
-    pkgs.stdenv.mkDerivation
+    p.stdenv.mkDerivation
       rec
       { name = "purescript-tidy-patched";
         src = purescript-tidy;
