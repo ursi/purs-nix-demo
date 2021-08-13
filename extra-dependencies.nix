@@ -35,17 +35,17 @@ purs-nix:
 
           dependencies =
             with ps-pkgs;
-              [ aff
-                console
-                effect
-                lists
-                maybe
-                node-fs-aff
-                node-path
-                node-process
-                ordered-collections
-                strings
-              ];
+            [ aff
+              console
+              effect
+              lists
+              maybe
+              node-fs-aff
+              node-path
+              node-process
+              ordered-collections
+              strings
+            ];
         };
 
     node-workerbees =
@@ -57,19 +57,18 @@ purs-nix:
 
           dependencies =
             with ps-pkgs;
-              [ aff
-                argonaut-core
-                arraybuffer-types
-                avar
-                effect
-                either
-                exceptions
-                maybe
-                newtype
-                parallel
-                variant
-              ];
-
+            [ aff
+              argonaut-core
+              arraybuffer-types
+              avar
+              effect
+              either
+              exceptions
+              maybe
+              newtype
+              parallel
+              variant
+            ];
         };
 
     purescript-language-cst-parser =
