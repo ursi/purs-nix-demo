@@ -3,12 +3,14 @@ let
   l = p.lib; p = pkgs;
   inherit (import ./inputs.nix) pkgs purescript-tidy purs-nix;
 
+  package-json = l.importJSON (purescript-tidy + /package.json);
+
   purescript-tidy-patched =
     p.stdenv.mkDerivation
       rec
       { name = "purescript-tidy-patched";
         src = purescript-tidy;
-        version = (l.importJSON (purescript-tidy + /package.json)).version;
+        version = package-json.version;
 
         patchPhase =
           ''
@@ -72,6 +74,6 @@ let
     modules;
 in
 modules.Main.install
-  { name = "purs-tidy";
+  { name = package-json.name;
     auto-flags = false;
   }
