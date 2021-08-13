@@ -1,0 +1,1 @@
+This is a demo of packaging a project in **purs-nix** vs **spago2nix**. The **spago2nix** version can be found [here](https://github.com/justinwoo/easy-purescript-nix/tree/4d807ead23c36be138fd564bfeb1da02d0278624/purs-tidy).
