@@ -75,5 +75,4 @@ let
 in
 modules.Main.install
   { name = package-json.name;
-    auto-flags = false;
   }

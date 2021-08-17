@@ -19,7 +19,7 @@ rec
     import
       (fetchGit
          { url = "https://github.com/ursi/purs-nix.git";
-           rev = "a88bb002ba092ce665042a0d98136c076e253b79";
+           rev = "988505248316b1dc82504c8e25358da535e34bd6";
          }
       )
       { inherit pkgs; };

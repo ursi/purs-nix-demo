@@ -1,3 +1,4 @@
+# all these pacakges are now in the purs-nix package set, however, they weren't when this demo was made, so this file kept around for fairness.
 purs-nix:
   let inherit (purs-nix) build ps-pkgs; in
   { argparse-basic =
