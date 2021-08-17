@@ -73,4 +73,4 @@ let
     )
     modules;
 in
-modules.Main.install { inherit (package-json) name; }
+modules.Main.install { inherit (package-json) name version; }
