@@ -10,7 +10,7 @@ let
       rec
       { name = "purescript-tidy-patched";
         src = purescript-tidy;
-        version = package-json.version;
+        inherit (package-json) version;
 
         patchPhase =
           ''
@@ -73,6 +73,4 @@ let
     )
     modules;
 in
-modules.Main.install
-  { name = package-json.name;
-  }
+modules.Main.install { inherit (package-json) name; }
